@@ -102,3 +102,26 @@ Received Import Request.
 Start importing Assets/Prefabs using Guid(7f612e45e855c8e489bf45c943249d3a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1f06ac7b12a910d143302c085d72d964') in 0.001074 seconds
   Import took 0.003324 seconds .
 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001068 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.48 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.942 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.36 ms, found 1 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1380 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 117.9 MB.
+System memory in use after: 118.0 MB.
+
+Unloading 24 unused Assets to reduce memory usage. Loaded Objects now: 1818.
+Total: 1.889308 ms (FindLiveObjects: 0.223491 ms CreateObjectMapping: 0.046638 ms MarkObjects: 1.595025 ms  DeleteObjects: 0.023209 ms)
+
