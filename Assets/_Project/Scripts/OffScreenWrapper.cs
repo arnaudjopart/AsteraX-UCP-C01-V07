@@ -8,6 +8,7 @@ public class OffScreenWrapper : MonoBehaviour
 {
     private WrapBorders m_wrapBorders;
     private bool m_canBeWrapped;
+    private Vector3 m_enterWrapZonePosition;
 
     private void Awake()
     {
@@ -29,6 +30,7 @@ public class OffScreenWrapper : MonoBehaviour
     public void HandleEnteringWrapZone()
     {
         m_canBeWrapped = true;
+        m_enterWrapZonePosition = transform.position;
     }
 
     public void HandleLeavingWrapZone()

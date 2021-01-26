@@ -152,6 +152,7 @@ Transform:
   m_Children:
   - {fileID: 1224947154}
   - {fileID: 551431166}
+  - {fileID: 606415027}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -199,6 +200,12 @@ Transform:
   m_Father: {fileID: 1812824222}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &476802494 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4835359798812554, guid: 2c350f2ea6d36435b8b50bf6e3c429cb,
+    type: 3}
+  m_PrefabInstance: {fileID: 2066196650}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &551431165
 GameObject:
   m_ObjectHideFlags: 0
@@ -243,6 +250,53 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_camera: {fileID: 1854861996}
+  m_widthOfScreen: 0
+  m_heightOfScreen: 0
+--- !u!1 &606415026
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 606415027}
+  - component: {fileID: 606415028}
+  m_Layer: 0
+  m_Name: BulletPoolSystem
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &606415027
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 606415026}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 25894185}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &606415028
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 606415026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2ee81eb5d2c3412e957f4d48e0f1f13, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_nbItemToCreate: 10
+  m_item: {fileID: -384223763167558184, guid: 0e9c239fd33d94404b671bc44ab4f6b4, type: 3}
 --- !u!1 &1224947151 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1664251521892296, guid: 2c350f2ea6d36435b8b50bf6e3c429cb,
@@ -269,6 +323,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_moveSpeed: 10
   m_turretRotator: {fileID: 1302648282}
+--- !u!114 &1224947156
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1224947151}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d46429ed5e342a5aa2c1ec422a4c4b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_currentWeaponData: {fileID: 11400000, guid: c8b50e9b30a0345c5ba79a619216c466,
+    type: 2}
+  m_event: {fileID: 0}
+  m_turretCannonSpawn: {fileID: 1856825602}
+  m_bulletPoolSystem: {fileID: 606415028}
 --- !u!4 &1302648282 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4128896187653560, guid: 2c350f2ea6d36435b8b50bf6e3c429cb,
@@ -464,6 +535,36 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1856825601
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1856825602}
+  m_Layer: 8
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1856825602
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1856825601}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.26, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 476802494}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1950386350

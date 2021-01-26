@@ -11,9 +11,13 @@ public class PlayerShip : InputListener
     public float m_moveSpeed;
 
     public Transform m_turretRotator;
+
+    private WeaponSystem m_weapon;
+
     // Start is called before the first frame update
     private void Awake()
     {
+        m_weapon = GetComponent<WeaponSystem>();
     }
     
 
@@ -42,7 +46,7 @@ public class PlayerShip : InputListener
 
     public override void ProcessMouseLeftButtonPressed(bool _isDown)
     {
-        
+        if(_isDown)m_weapon.Shoot();
     }
 }
 
