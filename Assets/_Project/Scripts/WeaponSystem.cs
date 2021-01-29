@@ -37,6 +37,7 @@ public class WeaponSystem : MonoBehaviour
         bullet.transform.rotation = m_turretCannonSpawn.rotation;
 
         bullet.m_move.m_speed = m_currentWeaponData.m_speed;
+        bullet.m_move.direction = m_turretCannonSpawn.rotation * Vector3.up;
         bullet.m_liveTime.m_liveTime = m_currentWeaponData.m_liveTime;
         
         bullet.gameObject.SetActive(true);

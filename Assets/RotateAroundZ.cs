@@ -2,10 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MoveForward : MonoBehaviour
+public class RotateAroundZ : MonoBehaviour
 {
-    public float m_speed = 10;
-    public Vector3 direction;
+    public float m_speed=10;
 
     // Start is called before the first frame update
     void Start()
@@ -14,9 +13,8 @@ public class MoveForward : MonoBehaviour
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
-        transform.position += direction* (m_speed * Time.deltaTime);
+        transform.rotation*= Quaternion.Euler(0,0,m_speed*Time.deltaTime);
     }
-    
 }
